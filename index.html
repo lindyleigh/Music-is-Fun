@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>myTunes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+  </head>
+  <body>
+    <section class="jumbotron">
+      <div class="header">
+      <h1>myTunes.</h1>
+      <p>It's your music.</p>
+      </div>
+    </section>
+      
+      
+      <form class="col-md-6 form-inline">
+        <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
+        <div class="form-group">
+          <input type="text" class="form-control" id="artist" placeholder="Artist Name"/>
+          <button type="button" class="btn btn-primary" id="get-music-button" onclick="getMusic()">Get Music</button>
+        </div>
+      </form>
+      
+      <section class="container">
+        <div class="row">
+          <div class="col-md-6 music-output" style="background-color:black">
+            <ul id="song-list" class="list-group">
+            
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+      <script src="app.js"></script>
+  </body>
+</html>
