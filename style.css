@@ -3,14 +3,16 @@ body {
 }
 
 .jumbotron {
-  background-image: url("http://mccallchamber.org/wp-content/uploads/2014/05/Music-Concert-Crowd.jpg");
- 
+  background-image: url("concert.jpg");
   background-size: cover;
+  background-position: bottom; 
+  padding-bottom: 0;
+
 }
 
 .header {
   color: white;
-  margin-top: 600px;
+  margin-top: 500px;
   text-align: center;
 }
 
@@ -19,15 +21,19 @@ body {
   text-align: center;
 }
 
-.music-output {
-  border: 10px solid black;
-  padding: 5px;
-  margin: 5px;
-  
-  
+.btn {
+    background-color: rgb(237, 204, 14);
+    color: black;
+    font-weight: bold;
 }
 
-.bg-black {
+.music-output {
+    padding-top: 20px;
+}
+
+
+.list-group-item {
   background-color: black;
   color: white;
+  margin: 10px;
 }

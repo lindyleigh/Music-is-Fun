@@ -33,9 +33,23 @@ function getMusic(){
 
 function drawSongs(songList){
    console.log(songList);
+   var songs = "";
+   var listOfSongs = document.getElementById('song-list');
   for (i=0; i<songList.length; i++){
   var currentSong = songList[i];
-  document.getElementById('song-list').innerHTML += "<li class='list-group-item'>" +"<h3>"+currentSong.title+"</h3>" + "<img src='"+currentSong.albumArt+"'/>" + "<h5>"+currentSong.artist+"</h5>" + "<h5>"+currentSong.collection+"</h5>" + "<h5>"+currentSong.price+"</h5>" + "<audio controls src='"+currentSong.preview+"'/>" +"</li>";
+ songs += "<li class='list-group-item'>" +"<h3>"+currentSong.title+"</h3>" + "<img src='"+currentSong.albumArt+"'/>" + "<h5>"+currentSong.artist+"</h5>" + "<h5>"+currentSong.collection+"</h5>" + "<h5>"+"$"+currentSong.price+"</h5>" + "<audio controls src='"+currentSong.preview+"'/>" +"</li>";
+  
   }
+  
+  listOfSongs.innerHTML = songs; 
 }
+
+document.addEventListener('play', function(e){
+   var audios = document.getElementsByTagName('audio');
+   for(var i = 0, len = audios.length; i < len;i++){
+       if(audios[i] != e.target){
+           audios[i].pause();
+       }
+   }
+}, true);
 
